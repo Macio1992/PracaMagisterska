@@ -1,0 +1,94 @@
+Przegl¹d
+
+Ten wyk³ad jest o problemach zwi¹zanych z konceptami.
+
+Ulepszone diagnostyki kompilatora: unikaæ szablonowego rzygu.
+Bezpoœrednia ekspresja pomys³u: unikaæ m¹drych idiomów: lepsze narzêdzia do rozszerzania definicji.
+
+1) Motywowanie ograniczonych szablonów (Motivating constrained templates)
+2) Concepts Litest
+
+3) Ograniczenia
+4) Koncepty(Concepts)
+5) Biblioteki
+
+Programowanie generyczne
+
+„... styl programowania w którym algorytmy s¹ pisane pod wzglêdem typów 'do sprecyzowania póŸniej', które póŸniej s¹ inicjowane gdy s¹ potrzebne do okreœlonych typów dostarczonych jako argumenty” - Wikipedia
+
+Typowanie dynamiczne(Dynamic typing)
+
+Jêzyki typowane dynamicznie (Dynamically typed languages), typ jest czêœci¹ obiektu.
+
+Algorytm jest 'inicjowany' gdy siê uruchamia.
+
+Nazwy i operacje rozwi¹zane przeciwko typowi dynamicznemu i zawartoœci argumentu.
+
+„Duck” typing
+
+B³¹d typu
+
+W programowaniu generycznym, b³¹d typu pojawia siê gdy argument jest u¿yty w sposób, który nie jest wsparty.
+
+B³êdy s¹ zdiagnozowane w momencie w którym pojawiaj¹ siê w programie.
+
+Zawsze wymaga pewnego rodzaju stosu.
+
+T³umaczenie na C++
+
+Czy mo¿emy osi¹gn¹æ ten sam poziom prostoty?
+
+W tym samym czasie poprawiaj¹c
+Diagnostykê
+Ekspresjê
+
+Cecha konceptów
+
+Specyfikator typu auto jest dozwolony w typach parametrów funkcji
+
+void f1(auto x);
+
+template<typename T>
+void f1(T x);
+
+void f2(vector<auto>& v);
+template<typename T>
+void f2(vector<T>& v);
+
+void f3(auto (auto::*mfp)(auto));
+template<typename T1, typename T2, typename T3>
+void f3(T1 (T2::*mfp)(T3));
+
+Generyczny algorytm
+
+bool all(const auto& seq, auto pred) {
+	for(const auto& x : seq)
+		if(!pred(x)) return false;
+	return true;
+}
+
+template<typename Seq, typename Fn>
+bool all(const Seq& seq, Fn pred) {
+	for(const auto& x : seq)
+		if(!pred(x)) return false;
+	return true;
+}
+
+Statystycznie typowane jêzyki
+
+W tych jêzykach, inicjalizacja odbywa siê w czasie kompilacji
+
+Wywnioskowaæ, wywieœæ argumenty szablonu z argumentów funkcji
+Zamieniæ wystêpowanie parametrów szablonu z wywnioskowanymi argumentami szablonu
+Stworzyæ now¹ deklaracjê (specjalizacjê) funkcji z kodu zastêpczego
+
+B³êdy typu(Type errors)
+
+Inicjacja stosu zamiast stosu czasu wykonania (Instantiation stack instead of runtime stack)
+
+B³êdy typu
+
+Utrudniaj¹ pisanie, utrzymanie kodu
+Czasami mog¹ prowadziæ do subtelnych b³êdów
+
+
