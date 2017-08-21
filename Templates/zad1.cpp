@@ -2,9 +2,13 @@
 
 using namespace std;
 
-concept EqualityComparable<typename T>
+template<typename T>
+concept EqualityComparable()
 {
-	bool operator==(const T& x, const T& y);
+	return requires{
+		bool operator==(const T& x, const T& y);
+	};
+	
 }
 
 int main () {

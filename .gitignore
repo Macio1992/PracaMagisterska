@@ -1,0 +1,5 @@
+/Templates/*.exe
+/Dev/*.o
+/Dev/*.exe
+/Dev/*.layout
+/Dev/*.win
