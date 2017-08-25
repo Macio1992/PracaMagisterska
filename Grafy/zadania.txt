@@ -1,0 +1,19 @@
+Napisz program, który znajduje wartoœæ maksymalnego przep³ywu oraz minimalny przekrój dla podanej sieci przep³ywowej. 
+Program powinien byæ wra¿liwy na podanie sieci bez drogi miêdzy startem a ujœciem. Dla poprawnej sieci program powinien 
+zwracaæ wartoœæ maksymalnego przep³ywu.
+
+wprowadzenie do programu sieci, znalezienie wartoœci maksymalnego przep³ywu - 9 pkt
+znalezienie œcie¿ek powiêkszaj¹cych metod¹ cechowania wierzcho³ków - 6 pkt
+wyznaczenie minimalnego przekroju (zbiór ³uków) - 3 pkt
+
+Zad.1. PrzeœledŸ dzia³anie algorytmu œcie¿ek powiêkszaj¹cych dla grafu podanego na zajêciach.
+
+Zad.2 Wykorzystaj algorytm szukania maksymalnego przep³ywu dla znalezienia perfect matchingu w grafie dwudzielnym.
+
+Zad.3. Zadanie implementacyjne (9 pkt) termin: 13.01.2017: Napisz program, który:
+
+na wejœcie dostanie graf
+sprawdzi, czy jest to graf dwudzielny
+Jeœli tak, to znajdzie skojarzenie maksymalne, metod¹ szukania maksymalnego przep³ywu w odpowiedniej sieci.
+
+Napisz program wyszukuj¹cy w grafie cykl Eulera, jeœli takowy istnieje. (9pkt)
