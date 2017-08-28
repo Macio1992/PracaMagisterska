@@ -3,3 +3,10 @@
 /Dev/*.exe
 /Dev/*.layout
 /Dev/*.win
+
+/Tex/*.aux
+/Tex/*.log
+/Tex/*.out
+/Tex/*.gz
+/Tex/*.toc
+/Tex/test
