@@ -1,4 +1,6 @@
 /Templates/*.exe
+/Templates/origin-master
+
 /Dev/*.o
 /Dev/*.exe
 /Dev/*.layout
