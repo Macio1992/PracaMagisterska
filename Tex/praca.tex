@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 
 \author{Maciej Zbierowski}
-\title{Tytuł}
+\title{Koncepty}
 
 \linespread{1.3}
 \usepackage{hyperref}
@@ -25,13 +25,19 @@
 	\maketitle
 	\tableofcontents
 	\newpage
-	\pagenumbering{arabic}	
+	\pagenumbering{arabic}
 	
-	\input{Szablony}	
+	\section*{Wstęp}
+
+	\input{Wstep/Wstep}
+
+	\addcontentsline{toc}{section}{Wstęp}
+	
+	\input{Szablony/Szablony}
 	
 	\newpage
 	
-	\input{Koncepty}
+	\input{Koncepty/Koncepty}
 	
 	\newpage
 	
