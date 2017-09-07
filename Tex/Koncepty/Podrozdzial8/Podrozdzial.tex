@@ -27,13 +27,15 @@ Potrzeba różnych wersji tego algorytmu, m.in.
 Taka selekcja czasu kompilacji jest istotna dla wykonania kodu generycznego. Tradycyjnie, da się to zaimplementować używając funkcji pomocniczych lub techniki \emph{Tag Dispatching}\footnote{Technika programowania generycznego polegająca na wykorzystaniu przeciążania funkcji w celu wybrania, którą implementację funkcji wywołać w czasie wykonania}, lecz z konceptami rozwiązanie jest proste i oczywiste:
 
 \begin{lstlisting}[frame=single]
-template<Forward_iterator F, int n> void advance(F f, int n){
+template<Forward_iterator F, int n> 
+void advance(F f, int n){
    while(n--) ++f;
 }
 \end{lstlisting}
 
 \begin{lstlisting}[frame=single]
-template<Random_access_iterator R, int n> void advance(R r, int n){
+template<Random_access_iterator R, int n> 
+void advance(R r, int n){
    r += n;
 }
 \end{lstlisting}
@@ -64,7 +66,7 @@ konceptu są podzbiorem wymagań drugiego
 \end{itemize}
 \end{itemize}
 
-W funkcji \verb#test#, \verb#Random_access_iterator# ma więcej wymagań niż \verb#Forward_iterator#, więc wywołuje się szybka wersja \verb#advance# dla iteratora zmiennej \verb#vector#. Dla ietratora zmiennej \verb#list#, pasuje tylko iterator \emph{Forward}, więc używamy wolnej wersji \verb#advance#.
+W funkcji \verb#test#, \verb#Random_access_iterator# ma więcej wymagań niż \newline \verb#Forward_iterator#, więc wywołuje się szybka wersja \verb#advance# dla iteratora zmiennej \verb#vector#. Dla ietratora zmiennej \verb#list#, pasuje tylko iterator \emph{Forward}, więc używamy wolnej wersji \verb#advance#.
 
 \verb#Random_access_iterator# jest bardziej określony niż \verb#Forward_iterator# bo wymaga wszystkiego co 
 \verb#Forward_iterator# i dodatkowo operatorów takich jak \verb#[]# i \verb#+#.

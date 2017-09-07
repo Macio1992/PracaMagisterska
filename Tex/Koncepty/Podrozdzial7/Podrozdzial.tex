@@ -71,11 +71,11 @@ Less_than_comparable<Value_type<T>>;
 
 \verb#Random_access_iterator# i \verb#Less_than_comparable# są zdefiniowane analogicznie do \verb#Equality_comparable#
 
-Często, wymagane są relacje pomiędzy konceptami. Np. koncept \verb#Equality_comparable# jest zdefiniwoany by wymagał jeden typ. Można zdefiniować ten koncept by radził sobie z dwoma typami:
+Często, wymagane są relacje pomiędzy konceptami. Np. koncept \newline \verb#Equality_comparable# jest zdefiniwoany by wymagał jeden typ. Można zdefiniować ten koncept by radził sobie z dwoma typami:
 
 \begin{lstlisting}[frame=single]
 template<typename T, typename U>
-concept bool Equality_comparable = requires (T a, U b) {
+concept bool Equality_comparable = requires(T a, U b){
    { a == b } -> bool;
    { a != b } -> bool;
    { b == a } -> bool;

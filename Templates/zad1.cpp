@@ -7,14 +7,17 @@
 using namespace std;
 // using namespace origin;/
 
+template<typename T>
+concept bool NewConcept() {
+    return requires(T t){
+        axiom Consistency(T x, T y) {
+        (x == y) <=> !(x != y);
+        }
+    };
+};
+
 int main () {
 
-    vector<int> v {3,1,4};
-    auto v1 = v.begin();
-
-    advance(v1, 2);
-
-    cout<<*v1<<endl;
 
     return 0;
 }
